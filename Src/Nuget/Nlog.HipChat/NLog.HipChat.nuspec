@@ -5,6 +5,7 @@
         <version>0.0.0</version>
         <title>NLog.HipChat</title>
         <authors>Kirk Chen</authors>
+        <projectUrl>https://github.com/kirkchen/NLog.HipChat</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>NLog HipChat Target.</description>
         <dependencies>
