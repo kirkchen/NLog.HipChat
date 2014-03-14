@@ -2,6 +2,7 @@
 *.user
 *.vspscc
 *.scc
+*.nupkg
 App_Data
 Tmp
 bin
