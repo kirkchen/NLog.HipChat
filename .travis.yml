@@ -7,3 +7,7 @@ install:
 
 script:
   - xbuild Src/NLog.Hipchat.sln
+
+env:
+  global:
+    - EnableNuGetPackageRestore=true
