@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/kirkchen/NLog.HipChat.png?branch=master)](https://travis-ci.org/kirkchen/NLog.HipChat)
-
-# Nlog.HipChat 
+# Nlog.HipChat [![Build Status](https://travis-ci.org/kirkchen/NLog.HipChat.png?branch=master)](https://travis-ci.org/kirkchen/NLog.HipChat)
 
 This is a [NLog](https://github.com/NLog/NLog "NLog") target for hipchat. Allow you sending certain log message to your hipchat chatroom.
 
