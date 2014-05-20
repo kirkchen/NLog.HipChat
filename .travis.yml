@@ -1,17 +1,18 @@
 language: c
 
 install:
-  - sudo add-apt-repository ppa:directhex/monoxide -y && sudo apt-get update
-  - sudo apt-get install mono-devel mono-gmcs 
-  - mozroots --import --sync
+- sudo add-apt-repository ppa:directhex/monoxide -y && sudo apt-get update
+- sudo apt-get install mono-devel mono-gmcs
+- mozroots --import --sync
 
 script:
-  - xbuild Src/NLog.Hipchat.sln
+- xbuild Src/NLog.Hipchat.sln
 
 after_success:
-  - 'bash Build/PublishNuGetPackage.sh'
+- bash Build/PublishNuGetPackage.sh
 
 env:
   global:
-    - EnableNuGetPackageRestore=true
-    - VersionNumberPrefix=1.0
+  - EnableNuGetPackageRestore=true
+  - VersionNumberPrefix=1.0
+  - secure: DuSSyeLlYEQOPHawR1Gfbl446Y9621kw7C67HGZIUYtrRsXm9cuwTgmjKW30tXGJtUxK1Ek9PazjHV0gcDNQZia9YJi9wRnpMvsbj0Yktfm4zpEc0kZ1ebU3bLS6fm5FQ05a0C+qvQiqeHmioS0756fV6hzSK3jfRKcNcSsItQI=
