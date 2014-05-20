@@ -2,9 +2,7 @@ VersionNumber="$VersionNumberPrefix.${TRAVIS_BUILD_NUMBER}"
 
 echo "VersionNumber: $VersionNumber"
 
-if [ "$TRAVIS_BRANCH" == "master" ]; then	
-	mkdir Src/Nuget/Packages
-
-	mono --runtime=v4.0.30319 Src/.nuget/NuGet.exe Pack Src/Nuget/Nlog.HipChat/NLog.HipChat.nuspec -NonInteractive -Version ${VersionNumber}
+if [ "$TRAVIS_BRANCH" == "master" ]; then		
+	mono --runtime=v4.0.30319 Src/.nuget/NuGet.exe Pack NLog.HipChat.nuspec -NonInteractive -Version ${VersionNumber}
 	mono --runtime=v4.0.30319 Src/.nuget/NuGet.exe Push NLog.HipChat.${VersionNumber}.nupkg ${NUGET_APIKEY} -NonInteractive
 fi
