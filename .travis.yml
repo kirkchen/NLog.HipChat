@@ -14,5 +14,5 @@ after_success:
 env:
   global:
   - EnableNuGetPackageRestore=true
-  - VersionNumberPrefix=1.0
-  - secure: DuSSyeLlYEQOPHawR1Gfbl446Y9621kw7C67HGZIUYtrRsXm9cuwTgmjKW30tXGJtUxK1Ek9PazjHV0gcDNQZia9YJi9wRnpMvsbj0Yktfm4zpEc0kZ1ebU3bLS6fm5FQ05a0C+qvQiqeHmioS0756fV6hzSK3jfRKcNcSsItQI=
+  - VersionNumberPrefix=1.0  
+  - secure: hNouEImerTTzLfnWMuIRMFML1C5DxyNRgkcA0ES7w2uyeKGW32gzNeNTI2xoRZgKkGCQaV3V4AREDjab6JxKFdMEtsjfCY/+LknYnAMtDx24ivQoJXJHCqjoGlXWnV5FMK+v9CWZaeWKXiMAveh6+kW79Sw+XyS50k1B8gvktP0=
