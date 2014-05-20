@@ -8,6 +8,10 @@ install:
 script:
   - xbuild Src/NLog.Hipchat.sln
 
+after_success:
+  - 'bash Build/PublishNuGetPackage.sh'
+
 env:
   global:
     - EnableNuGetPackageRestore=true
+    - VersionNumberPrefix=1.0
