@@ -16,6 +16,6 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="..\..\NLog.HipChat\bin\Debug\NLog.HipChat.dll" target="lib\net45\NLog.HipChat.dll" />
+        <file src="Src/NLog.HipChat/NLog.HipChat/bin/Debug/NLog.HipChat.dll" target="lib/net45/NLog.HipChat.dll" />
     </files>
 </package>
