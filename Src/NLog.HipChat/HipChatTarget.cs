@@ -30,6 +30,9 @@ namespace NLog.Targets.HipChat
         [DefaultValue(HipChatClient.BackgroundColor.yellow)]
         public HipChatClient.BackgroundColor BackgroundColor { get; set; }
 
+        [DefaultValue("html")]
+        public string MessageFormat { get; set; }
+
 
         protected override void Write(LogEventInfo logEvent)
         {
@@ -38,9 +41,20 @@ namespace NLog.Targets.HipChat
             this.SendMessageToHipchat(log);
         }
 
+        private HipChatClient.MessageFormat ParseFormat()
+        {
+            var ishtml = string.Equals(MessageFormat, "html", StringComparison.OrdinalIgnoreCase);
+            return ishtml
+                ? HipChatClient.MessageFormat.html
+                : HipChatClient.MessageFormat.text;
+        }
+
         private void SendMessageToHipchat(string message)
         {
-            var client = new HipChatClient(this.AuthToken, this.RoomId, this.SenderName);
+            var format = ParseFormat();
+
+            var client = new HipChatClient(this.AuthToken, this.RoomId, format);
+            client.From = SenderName;
 
             client.SendMessage(message, this.BackgroundColor);
         }
