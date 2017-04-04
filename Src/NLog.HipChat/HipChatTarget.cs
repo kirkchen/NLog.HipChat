@@ -43,10 +43,10 @@ namespace NLog.Targets.HipChat
 
         private HipChatClient.MessageFormat ParseFormat()
         {
-            var ishtml = string.Equals(MessageFormat, "html", StringComparison.OrdinalIgnoreCase);
-            return ishtml
-                ? HipChatClient.MessageFormat.html
-                : HipChatClient.MessageFormat.text;
+            var isText = string.Equals(MessageFormat, "text", StringComparison.OrdinalIgnoreCase);
+            return isText
+                ? HipChatClient.MessageFormat.text
+                : HipChatClient.MessageFormat.html;
         }
 
         private void SendMessageToHipchat(string message)
